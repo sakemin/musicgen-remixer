@@ -1,5 +1,5 @@
 # MusicGen Remixer Replicate API-Caller
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]()
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sakemin/musicgen-remixer-replicate-api-caller/blob/main/musicgen_remixer.ipynb)
 ### Remix the music into another styles with MusicGen Chord
 [MusicGen Remixer](https://replicate.com/sakemin/musicgen-remixer) is an app based on MusicGen Chord. Users can upload a music track with vocals, type in the text description prompt, and the app will create a new background track based on the input and then make a remixed music output.
 This Jupyter notebook breaks down the process of MusicGen Remixer, by calling separate Replicate API calls and processing the outputs of the API calls.
