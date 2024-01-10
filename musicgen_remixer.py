@@ -1,4 +1,4 @@
-# MusicGen Remixer Replicate API-Caller
+# MusicGen Remixer
 
 ### Remix the music into another styles with MusicGen Chord
 
