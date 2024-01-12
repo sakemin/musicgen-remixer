@@ -207,7 +207,7 @@ def main(
 
     ### Make the output directory if it doesn't exist
     Path(output_path).mkdir(parents=True, exist_ok=True)
-    (Path(output_path) / "WIPs").mkdir(parents=True, exist_ok=True)
+    (Path(output_path) / "inter_process").mkdir(parents=True, exist_ok=True)
 
     ### Determine the number of channels based on the model version
     if "stereo" in model_version:
@@ -260,7 +260,7 @@ def main(
 
     ### Save the vocal track in mp3 format
     vocal_path = (
-        str(Path(output_path) / "WIPs" / Path(audio_path).name.rsplit(".", 1)[0])
+        str(Path(output_path) / "inter_process" / Path(audio_path).name.rsplit(".", 1)[0])
         + "_vocals.mp3"
     )
     save_numpy_as_audio(vocal_track, vocal_sr, vocal_path)
@@ -273,7 +273,7 @@ def main(
 
     ### Save the instrumental track in mp3 format
     instrumental_path = (
-        str(Path(output_path) / "WIPs" / Path(audio_path).name.rsplit(".", 1)[0])
+        str(Path(output_path) / "inter_process" / Path(audio_path).name.rsplit(".", 1)[0])
         + "_inst.mp3"
     )
     save_numpy_as_audio(instrumental_track, instrumental_sr, instrumental_path)
@@ -300,7 +300,7 @@ def main(
 
     ### Save the generated instrumental track in mp3 format
     generated_instrumental_path = (
-        str(Path(output_path) / "WIPs" / Path(audio_path).name.rsplit(".", 1)[0])
+        str(Path(output_path) / "inter_process" / Path(audio_path).name.rsplit(".", 1)[0])
         + f"_{prompt}"
         + "_generated_inst.mp3"
     )
@@ -343,7 +343,7 @@ def main(
 
     ### Save the resampled instrumental track in mp3 format
     resampled_instrumental_path = (
-        str(Path(output_path) / "WIPs" / Path(audio_path).name.rsplit(".", 1)[0])
+        str(Path(output_path) / "inter_process" / Path(audio_path).name.rsplit(".", 1)[0])
         + f"_{prompt}"
         + "_resampled_inst.mp3"
     )
@@ -442,7 +442,7 @@ def main(
 
     ### Save the time-stretched instrumental track in mp3 format
     time_stretched_instrumental_path = (
-        str(Path(output_path) / "WIPs" / Path(audio_path).name.rsplit(".", 1)[0])
+        str(Path(output_path) / "inter_process" / Path(audio_path).name.rsplit(".", 1)[0])
         + f"_{prompt}"
         + "_time_stretched_inst.mp3"
     )
